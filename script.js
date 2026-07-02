@@ -166,15 +166,17 @@ addCartBtns.forEach(btn => {
 
         const luxuryCard = btn.closest('.luxury-card');
         if (luxuryCard) {
-            title = luxuryCard.querySelector('.lux-title')?.textContent || title;
+            title = luxuryCard.querySelector('.lux-title')?.textContent.trim() || title;
             const priceText = luxuryCard.querySelector('.lux-price')?.textContent || "0";
-            price = parseFloat(priceText.replace(/[^0-9.]/g, '')) || 0;
+            const match = priceText.match(/\d+[\d,.]*/);
+            price = match ? parseFloat(match[0].replace(/,/g, '')) : 0;
             image = luxuryCard.querySelector('.lux-img-main')?.src || image;
         } else {
             // Probably Product Detail Page
-            title = document.querySelector('.pdp-title')?.textContent || title;
+            title = document.querySelector('.pdp-title')?.textContent.trim() || title;
             const priceText = document.querySelector('.pdp-price')?.textContent || "0";
-            price = parseFloat(priceText.replace(/[^0-9.]/g, '')) || 0;
+            const match = priceText.match(/\d+[\d,.]*/);
+            price = match ? parseFloat(match[0].replace(/,/g, '')) : 0;
             image = document.querySelector('.thumbnail.active')?.src || document.querySelector('.pdp-main-img')?.src || image;
             const qtyInput = document.querySelector('.qty-input');
             if (qtyInput) quantity = parseInt(qtyInput.value) || 1;
