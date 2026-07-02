@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Mahrukh Gul</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar" style="position: relative; background: var(--clr-background);">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="shop.html" class="nav-link">Shop</a>
+                </div>
+            </div>
+            <div class="nav-brand">
+                <a href="index.html">MAHRUKH GUL</a>
+            </div>
+            <div class="nav-right">
+                <button aria-label="Cart" class="icon-btn cart-btn">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Main Content -->
+    <main class="checkout-page section-padding">
+        <div class="container checkout-container">
+            <!-- Left Column: Forms -->
+            <div class="checkout-forms">
+                <h2 class="checkout-title">Checkout</h2>
+                
+                <section class="checkout-section">
+                    <h3>Contact Information</h3>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email address" class="form-input" required>
+                    </div>
+                </section>
+
+                <section class="checkout-section">
+                    <h3>Shipping Address</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="First name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Last name" class="form-input" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Address" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Apartment, suite, etc. (optional)" class="form-input">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="City" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Postal code" class="form-input" required>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="checkout-section">
+                    <h3>Payment</h3>
+                    <p style="color: var(--clr-text-muted); font-size: 0.9rem; margin-bottom: 1rem;">All transactions are secure and encrypted.</p>
+                    <div class="payment-box">
+                        <div class="form-group">
+                            <input type="text" placeholder="Card number" class="form-input" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="Expiration date (MM / YY)" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Security code" class="form-input" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Name on card" class="form-input" required>
+                        </div>
+                    </div>
+                </section>
+
+                <button class="btn btn-primary btn-full checkout-submit-btn" style="margin-top: 2rem;">Pay Now</button>
+            </div>
+
+            <!-- Right Column: Order Summary -->
+            <div class="checkout-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-items" id="checkout-items">
+                    <!-- Items will be injected here by script.js -->
+                </div>
+                
+                <div class="summary-totals">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="checkout-subtotal">Rs. 0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>Free</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Total</span>
+                        <span id="checkout-total">Rs. 0.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">MAHRUKH GUL</a>
+                <p>Elevating everyday fashion with minimalist luxury and timeless designs.</p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Mahrukh Gul. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Overlay & Drawer -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart (0)</h3>
+            <button class="close-cart" id="close-cart" aria-label="Close cart"><i data-lucide="x"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Items rendered by script.js -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <span>Rs. 0.00</span>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--clr-text-light); margin-bottom: 1rem; text-align: center;">
+                Shipping & taxes calculated at checkout.</p>
+            <a href="checkout.html" class="btn btn-primary btn-full" style="text-align: center; text-decoration: none; display: block;">Checkout</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Custom Checkout Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkoutItemsContainer = document.getElementById('checkout-items');
+            const checkoutSubtotal = document.getElementById('checkout-subtotal');
+            const checkoutTotal = document.getElementById('checkout-total');
+            const checkoutBtn = document.querySelector('.checkout-submit-btn');
+
+            function renderCheckout() {
+                const cart = JSON.parse(localStorage.getItem('mahrukh_cart')) || [];
+                
+                if (cart.length === 0) {
+                    checkoutItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+                    checkoutSubtotal.textContent = 'Rs. 0.00';
+                    checkoutTotal.textContent = 'Rs. 0.00';
+                    return;
+                }
+
+                checkoutItemsContainer.innerHTML = cart.map(item => `
+                    <div class="summary-item">
+                        <div class="summary-item-img-wrapper">
+                            <img src="${item.image}" alt="${item.title}">
+                            <span class="summary-item-qty">${item.quantity}</span>
+                        </div>
+                        <div class="summary-item-info">
+                            <h4>${item.title}</h4>
+                        </div>
+                        <div class="summary-item-price">
+                            Rs. ${(item.price * item.quantity).toFixed(2)}
+                        </div>
+                    </div>
+                `).join('');
+
+                const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                checkoutSubtotal.textContent = \`Rs. \${subtotal.toFixed(2)}\`;
+                checkoutTotal.textContent = \`Rs. \${subtotal.toFixed(2)}\`;
+            }
+
+            renderCheckout();
+
+            if (checkoutBtn) {
+                checkoutBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // Mock payment process
+                    const originalText = checkoutBtn.textContent;
+                    checkoutBtn.textContent = 'Processing...';
+                    
+                    setTimeout(() => {
+                        localStorage.removeItem('mahrukh_cart');
+                        alert('Order placed successfully! Thank you for shopping with Mahrukh Gul.');
+                        window.location.href = 'index.html';
+                    }, 1500);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

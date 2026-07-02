@@ -38,27 +38,61 @@ document.querySelectorAll('.fade-up').forEach(element => {
     observer.observe(element);
 });
 
-// Mock Cart Functionality
-const cartBtns = document.querySelectorAll('.add-to-cart-btn');
-const cartCountElement = document.querySelector('.cart-count');
-let cartCount = 0;
+// Real Cart Functionality (LocalStorage)
+let cart = JSON.parse(localStorage.getItem('mahrukh_cart')) || [];
+const cartCountElements = document.querySelectorAll('.cart-count');
+const cartItemsContainer = document.querySelector('.cart-items');
+const cartSubtotalElement = document.querySelector('.cart-subtotal span:last-child');
+const cartHeaderTitle = document.querySelector('.cart-header h3');
 
-cartBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        cartCount++;
-        cartCountElement.textContent = cartCount;
-        
-        // Simple animation feedback
-        btn.textContent = 'Added';
-        btn.style.backgroundColor = 'var(--clr-success)';
-        
-        setTimeout(() => {
-            btn.textContent = 'Add to Cart';
-            btn.style.backgroundColor = '';
-        }, 2000);
-    });
-});
+function saveCart() {
+    localStorage.setItem('mahrukh_cart', JSON.stringify(cart));
+    updateCartUI();
+}
+
+function updateCartUI() {
+    // Update Counts
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCountElements.forEach(el => el.textContent = totalItems);
+    if (cartHeaderTitle) {
+        cartHeaderTitle.textContent = `Your Cart (${totalItems})`;
+    }
+
+    // Render Items
+    if (!cartItemsContainer) return;
+    
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p style="padding: 2rem; text-align: center; color: var(--clr-text-light);">Your cart is empty.</p>';
+        if (cartSubtotalElement) cartSubtotalElement.textContent = 'Rs. 0.00';
+        return;
+    }
+
+    cartItemsContainer.innerHTML = cart.map((item, index) => `
+        <div class="cart-item" data-index="${index}">
+            <img src="${item.image}" alt="${item.title}" class="cart-item-img">
+            <div class="cart-item-info">
+                <h4 class="cart-item-title">${item.title}</h4>
+                <p class="cart-item-meta">Qty: ${item.quantity}</p>
+                <p class="cart-item-price">Rs. ${(item.price * item.quantity).toFixed(2)}</p>
+                <button class="remove-item" onclick="removeFromCart(${index})">Remove</button>
+            </div>
+        </div>
+    `).join('');
+
+    // Update Subtotal
+    const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    if (cartSubtotalElement) cartSubtotalElement.textContent = `Rs. ${subtotal.toFixed(2)}`;
+}
+
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    saveCart();
+}
+
+window.removeFromCart = removeFromCart; // Expose to global scope for inline onclick
+
+// Initialize UI
+updateCartUI();
 
 // Mock Newsletter Submit
 const newsletterForm = document.querySelector('.newsletter-form');
@@ -117,12 +151,57 @@ if (cartOverlay) {
     cartOverlay.addEventListener('click', closeCart);
 }
 
-// Update Mock Cart Functionality to open cart
-cartBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+// Add to Cart Handlers
+const addCartBtns = document.querySelectorAll('.add-to-cart-btn, .lux-add-cart');
+
+addCartBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Extract product details
+        let title = "Premium Item";
+        let price = 0;
+        let image = "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?q=80&w=1000&auto=format&fit=crop";
+        let quantity = 1;
+
+        const luxuryCard = btn.closest('.luxury-card');
+        if (luxuryCard) {
+            title = luxuryCard.querySelector('.lux-title')?.textContent || title;
+            const priceText = luxuryCard.querySelector('.lux-price')?.textContent || "0";
+            price = parseFloat(priceText.replace(/[^0-9.]/g, '')) || 0;
+            image = luxuryCard.querySelector('.lux-img-main')?.src || image;
+        } else {
+            // Probably Product Detail Page
+            title = document.querySelector('.pdp-title')?.textContent || title;
+            const priceText = document.querySelector('.pdp-price')?.textContent || "0";
+            price = parseFloat(priceText.replace(/[^0-9.]/g, '')) || 0;
+            image = document.querySelector('.thumbnail.active')?.src || document.querySelector('.pdp-main-img')?.src || image;
+            const qtyInput = document.querySelector('.qty-input');
+            if (qtyInput) quantity = parseInt(qtyInput.value) || 1;
+        }
+
+        // Add to cart array
+        const existingItem = cart.find(item => item.title === title);
+        if (existingItem) {
+            existingItem.quantity += quantity;
+        } else {
+            cart.push({ title, price, image, quantity });
+        }
+        
+        saveCart();
+
+        // Button Animation
+        const originalText = btn.textContent;
+        btn.textContent = 'Added';
+        btn.style.backgroundColor = 'var(--clr-success)';
+        btn.style.color = 'white';
+        
         setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.backgroundColor = '';
+            btn.style.color = '';
             openCart();
-        }, 500); // Open cart after a short delay
+        }, 1000);
     });
 });
 
