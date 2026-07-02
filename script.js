@@ -173,11 +173,12 @@ function toggleMobileMenu() {
     if (mobileOverlay) mobileOverlay.classList.toggle('active');
     document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
     
-    const icon = mobileMenuToggle.querySelector('i');
     if (navLinks.classList.contains('active')) {
-        icon.setAttribute('data-lucide', 'x');
+        mobileMenuToggle.innerHTML = '<i data-lucide="x"></i>';
+        mobileMenuToggle.style.color = 'var(--clr-text)';
     } else {
-        icon.setAttribute('data-lucide', 'menu');
+        mobileMenuToggle.innerHTML = '<i data-lucide="menu"></i>';
+        mobileMenuToggle.style.color = '';
     }
     lucide.createIcons();
 }

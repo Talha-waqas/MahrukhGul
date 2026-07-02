@@ -194,6 +194,11 @@ a {
     color: var(--clr-accent);
 }
 
+.icon-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
 .link-underline {
     position: relative;
     font-family: var(--font-heading);
@@ -2022,7 +2027,7 @@ a {
     display: none;
     background: none;
     border: none;
-    color: var(--clr-text);
+    color: inherit; /* Inherit white/dark dynamically from navbar */
     cursor: pointer;
     padding: 0.5rem;
 }
@@ -2062,11 +2067,26 @@ a {
 /* Tablet & Mobile Layouts (< 900px) */
 @media (max-width: 900px) {
 
+    /* Free fixed sidebar from containing block */
+    .navbar {
+        transform: none;
+        left: 2.5%;
+        /* width is 95%, so 2.5% left centers it */
+    }
+
+    .navbar.scrolled {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background-color: rgba(255, 255, 255, 0.98);
+    }
+
     /* Navigation - Slide Out Menu */
     .mobile-menu-toggle {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+        z-index: 1200; /* Ensure 'X' button sits above the sidebar */
     }
 
     /* Mobile Overlay */
@@ -2075,7 +2095,7 @@ a {
         position: fixed;
         inset: 0;
         background: rgba(0, 0, 0, 0.6);
-        z-index: 1050;
+        z-index: 900;
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.4s ease, visibility 0.4s ease;
@@ -2094,12 +2114,12 @@ a {
         width: 85%;
         max-width: 400px;
         height: 100vh;
-        background: var(--clr-bg);
+        background: var(--clr-bg-light);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        padding: 5rem 3rem;
+        padding: 6rem 2rem 5rem 2rem; /* Match 2rem left padding of navbar, clear top header */
         gap: 0;
         transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
         z-index: 1100;
@@ -2118,11 +2138,14 @@ a {
         display: block;
         width: 100%;
         margin-bottom: 2rem;
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+        transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .sidebar-brand {
         font-family: var(--font-heading);
-        font-size: 1.2rem;
+        font-size: 1.6rem; /* Match desktop brand size, larger than links */
         font-weight: 600;
         letter-spacing: 0.15em;
         text-transform: uppercase;
@@ -2131,16 +2154,20 @@ a {
 
     .sidebar-divider {
         display: block;
-        width: 40px;
+        width: 60px; /* Slightly longer for luxury feel */
         height: 2px;
         background-color: var(--clr-accent);
-        margin-bottom: 3.5rem;
+        margin-bottom: 2.5rem; /* Reduced to balance spacing */
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+        transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .sidebar-menu {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        align-items: flex-start;
+        gap: 1rem;
         width: 100%;
     }
 
@@ -2152,19 +2179,49 @@ a {
         letter-spacing: 0.05em;
 
         opacity: 0;
-        transform: translateX(-20px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
+        transform: translate3d(0, 20px, 0);
+        transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
     }
 
+    .nav-link::after {
+        display: none; /* Hide desktop underline */
+    }
+
+    .nav-links.active .sidebar-header,
+    .nav-links.active .sidebar-divider,
     .nav-links.active .nav-link {
         opacity: 1;
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
 
-    .nav-links.active .nav-link:nth-child(1) { transition-delay: 0.15s; }
-    .nav-links.active .nav-link:nth-child(2) { transition-delay: 0.25s; }
-    .nav-links.active .nav-link:nth-child(3) { transition-delay: 0.35s; }
-    .nav-links.active .nav-link:nth-child(4) { transition-delay: 0.45s; }
+    .nav-links.active .nav-link:hover {
+        color: var(--clr-accent);
+        transform: translate3d(10px, 0, 0);
+    }
+
+    .nav-links.active .sidebar-header {
+        transition-delay: 0.1s;
+    }
+
+    .nav-links.active .sidebar-divider {
+        transition-delay: 0.2s;
+    }
+
+    .nav-links.active .nav-link:nth-child(1) {
+        transition-delay: 0.3s;
+    }
+
+    .nav-links.active .nav-link:nth-child(2) {
+        transition-delay: 0.4s;
+    }
+
+    .nav-links.active .nav-link:nth-child(3) {
+        transition-delay: 0.5s;
+    }
+
+    .nav-links.active .nav-link:nth-child(4) {
+        transition-delay: 0.6s;
+    }
 
     .nav-left {
         display: flex;
@@ -2302,18 +2359,22 @@ a {
 /* ========================================= */
 
 .featured-collection {
-    background-color: #FAF9F6; /* Ivory / Warm White */
-    padding: 3rem 0; /* Reduced from 6rem */
+    background-color: #FAF9F6;
+    /* Ivory / Warm White */
+    padding: 3rem 0;
+    /* Reduced from 6rem */
 }
 
 .limited-edition-bg {
-    background-color: #f2efe9; /* Slightly darker taupe to separate sections visually */
+    background-color: #f2efe9;
+    /* Slightly darker taupe to separate sections visually */
 }
 
 .editorial-header {
     text-align: center;
     max-width: 700px;
-    margin: 0 auto 3rem; /* Reduced from 5rem */
+    margin: 0 auto 3rem;
+    /* Reduced from 5rem */
 }
 
 .editorial-label {
@@ -2321,14 +2382,16 @@ a {
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: #8C7B65; /* Soft Taupe / Champagne accent */
+    color: #8C7B65;
+    /* Soft Taupe / Champagne accent */
     margin-bottom: 1rem;
 }
 
 .editorial-title {
     font-family: var(--font-heading);
     font-size: 3rem;
-    color: #1A1A1A; /* Charcoal / Matte Black */
+    color: #1A1A1A;
+    /* Charcoal / Matte Black */
     font-weight: 400;
     margin-bottom: 1.5rem;
     line-height: 1.2;
@@ -2430,21 +2493,24 @@ a {
     padding: 0.4rem 0.8rem;
     background-color: #fff;
     color: #1A1A1A;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .luxury-badge.new {
     background-color: #1A1A1A;
     color: #fff;
 }
+
 .luxury-badge.exclusive {
     background-color: #8C7B65;
     color: #fff;
 }
+
 .luxury-badge.sale {
     background-color: #c94d4d;
     color: #fff;
 }
+
 .luxury-badge.trending {
     background-color: #e6dfd1;
     color: #1A1A1A;
@@ -2480,7 +2546,7 @@ a {
     justify-content: center;
     cursor: pointer;
     color: #1A1A1A;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
@@ -2557,7 +2623,8 @@ a {
 }
 
 .lux-rating i.star-filled {
-    color: #cda85f; /* Subtle gold */
+    color: #cda85f;
+    /* Subtle gold */
 }
 
 .lux-title {
@@ -2651,12 +2718,29 @@ a {
     border-radius: 50%;
 }
 
-.swatch.color-camel { background-color: #c19a6b; }
-.swatch.color-black { background-color: #111; }
-.swatch.color-ivory { background-color: #FAF9F6; }
-.swatch.color-champagne { background-color: #e6dfd1; }
-.swatch.color-taupe { background-color: #8e8379; }
-.swatch.color-charcoal { background-color: #36454F; }
+.swatch.color-camel {
+    background-color: #c19a6b;
+}
+
+.swatch.color-black {
+    background-color: #111;
+}
+
+.swatch.color-ivory {
+    background-color: #FAF9F6;
+}
+
+.swatch.color-champagne {
+    background-color: #e6dfd1;
+}
+
+.swatch.color-taupe {
+    background-color: #8e8379;
+}
+
+.swatch.color-charcoal {
+    background-color: #36454F;
+}
 
 .lux-sizes {
     display: flex;
@@ -2691,17 +2775,17 @@ a {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    
+
     .editorial-title {
         font-size: 2.2rem;
     }
-    
+
     /* Show buttons persistently on mobile */
     .lux-add-cart {
         transform: translateY(0);
         padding: 1rem;
     }
-    
+
     .lux-hover-actions {
         opacity: 1;
         transform: translateX(0);
