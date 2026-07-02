@@ -194,8 +194,8 @@
                 `).join('');
 
                 const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-                checkoutSubtotal.textContent = \`Rs. \${subtotal.toFixed(2)}\`;
-                checkoutTotal.textContent = \`Rs. \${subtotal.toFixed(2)}\`;
+                checkoutSubtotal.textContent = `Rs. ${subtotal.toFixed(2)}`;
+                checkoutTotal.textContent = `Rs. ${subtotal.toFixed(2)}`;
             }
 
             renderCheckout();
