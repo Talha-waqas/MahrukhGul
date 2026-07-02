@@ -264,7 +264,8 @@ a {
     flex: 1;
 }
 
-.nav-links {
+.nav-links,
+.sidebar-menu {
     display: flex;
     align-items: center;
     gap: 3rem;
@@ -2051,6 +2052,13 @@ a {
     }
 }
 
+/* Desktop overrides for mobile navigation elements */
+.mobile-overlay,
+.sidebar-header,
+.sidebar-divider {
+    display: none;
+}
+
 /* Tablet & Mobile Layouts (< 900px) */
 @media (max-width: 900px) {
 
@@ -2063,6 +2071,7 @@ a {
 
     /* Mobile Overlay */
     .mobile-overlay {
+        display: block;
         position: fixed;
         inset: 0;
         background: rgba(0, 0, 0, 0.6);
@@ -2106,6 +2115,7 @@ a {
     }
 
     .sidebar-header {
+        display: block;
         width: 100%;
         margin-bottom: 2rem;
     }
@@ -2120,6 +2130,7 @@ a {
     }
 
     .sidebar-divider {
+        display: block;
         width: 40px;
         height: 2px;
         background-color: var(--clr-accent);
