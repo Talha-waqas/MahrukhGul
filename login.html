@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Mahrukh Gul</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Mobile Sidebar Overlay -->
+    <div class="mobile-overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button aria-label="Menu" class="icon-btn mobile-menu-toggle"><i data-lucide="menu"></i></button>
+                <div class="nav-links">
+                    <div class="sidebar-header">
+                        <a href="index.html" class="sidebar-brand">MAHRUKH GUL</a>
+                    </div>
+                    <div class="sidebar-divider"></div>
+                    <div class="sidebar-menu">
+                        <a href="shop.html" class="nav-link">Shop</a>
+                        <a href="shop.html" class="nav-link">Collections</a>
+                        <a href="#" class="nav-link">About</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-brand">
+                <a href="index.html">MAHRUKH GUL</a>
+            </div>
+            <div class="nav-right">
+                <button aria-label="Search" class="icon-btn"><i data-lucide="search"></i></button>
+                <a href="login.html" aria-label="Account" class="icon-btn"><i data-lucide="user"></i></a>
+                <button aria-label="Cart" class="icon-btn cart-btn">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <main class="auth-layout fade-up">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h1>Welcome Back</h1>
+                <p>Sign in to access your wishlist and exclusive offers.</p>
+            </div>
+            
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="••••••••">
+                </div>
+                
+                <div class="auth-actions">
+                    <label style="display: flex; align-items: center; gap: 0.5rem; text-transform: none; letter-spacing: 0; font-family: var(--font-body); cursor: pointer;">
+                        <input type="checkbox" style="width: auto; padding: 0;"> Remember me
+                    </label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+            </form>
+            
+            <div class="auth-divider">
+                <span>OR</span>
+            </div>
+            
+            <button class="btn btn-secondary btn-full" style="border: 1px solid var(--clr-border); margin-bottom: 1.5rem;">
+                <i data-lucide="mail" style="margin-right: 0.5rem; width: 18px;"></i> Continue with Google
+            </button>
+            
+            <p style="text-align: center; font-size: 0.9rem;">
+                Don't have an account? <a href="register.html" class="link-underline">Register</a>
+            </p>
+        </div>
+    </main>
+
+    <!-- Cart Overlay & Drawer Placeholder -->
+    <!-- (Normally included via partials, but placed here for static demo) -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart (0)</h3>
+            <button class="close-cart" id="close-cart" aria-label="Close cart"><i data-lucide="x"></i></button>
+        </div>
+        <div class="cart-items">
+            <p style="text-align: center; color: var(--clr-text-light); margin-top: 2rem;">Your cart is currently empty.</p>
+            <a href="shop.html" class="btn btn-secondary" style="margin: 0 auto; display: inline-flex;">Continue Shopping</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">MAHRUKH GUL</a>
+                <p>Elevating everyday fashion with minimalist luxury and timeless designs.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <a href="shop.html">New Arrivals</a>
+                <a href="shop.html">Women</a>
+                <a href="shop.html">Men</a>
+                <a href="shop.html">Sale</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="#">FAQ</a>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">Track Order</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Connected</h4>
+                <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Mahrukh Gul. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

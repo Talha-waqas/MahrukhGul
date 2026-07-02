@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Trench Coat | Mahrukh Gul</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="pdp-body">
+    <!-- Mobile Sidebar Overlay -->
+    <div class="mobile-overlay"></div>
+
+    <!-- Navbar (Solid Background for PDP) -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button aria-label="Menu" class="icon-btn mobile-menu-toggle"><i data-lucide="menu"></i></button>
+                <div class="nav-links">
+                    <div class="sidebar-header">
+                        <a href="index.html" class="sidebar-brand">MAHRUKH GUL</a>
+                    </div>
+                    <div class="sidebar-divider"></div>
+                    <div class="sidebar-menu">
+                        <a href="shop.html" class="nav-link">Shop</a>
+                        <a href="shop.html" class="nav-link">Collections</a>
+                        <a href="#" class="nav-link">About</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-brand">
+                <a href="index.html">MAHRUKH GUL</a>
+            </div>
+            <div class="nav-right">
+                <button aria-label="Search" class="icon-btn"><i data-lucide="search"></i></button>
+                <a href="login.html" aria-label="Account" class="icon-btn"><i data-lucide="user"></i></a>
+                <button aria-label="Cart" class="icon-btn cart-btn">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Details Section -->
+    <main class="product-details section-padding" style="margin-top: 80px;">
+        <div class="container pdp-grid">
+            <!-- Image Gallery -->
+            <div class="pdp-gallery">
+                <div class="main-image-wrap">
+                    <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=1000&auto=format&fit=crop"
+                        alt="Minimalist Trench Coat" id="main-product-image">
+                </div>
+                <div class="thumbnail-list">
+                    <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=1000&auto=format&fit=crop"
+                        alt="Thumbnail 1" class="thumbnail active">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop"
+                        alt="Thumbnail 2" class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000&auto=format&fit=crop"
+                        alt="Thumbnail 3" class="thumbnail">
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="pdp-info">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a> / <a href="shop.html">Women</a> / <span>Outerwear</span>
+                </div>
+
+                <h1 class="pdp-title">Minimalist Trench Coat</h1>
+                <p class="pdp-price">$245.00</p>
+
+                <div class="pdp-reviews">
+                    <div class="stars">
+                        <i data-lucide="star" fill="currentColor"></i>
+                        <i data-lucide="star" fill="currentColor"></i>
+                        <i data-lucide="star" fill="currentColor"></i>
+                        <i data-lucide="star" fill="currentColor"></i>
+                        <i data-lucide="star" fill="currentColor"></i>
+                    </div>
+                    <a href="#reviews">(12 Reviews)</a>
+                </div>
+
+                <p class="pdp-description">
+                    A timeless classic redefined for the modern wardrobe. Crafted from premium water-resistant cotton
+                    gabardine, this trench coat features a relaxed silhouette, subtle drop shoulders, and our signature
+                    minimal hardware.
+                </p>
+
+                <!-- Color Selection -->
+                <div class="pdp-selector">
+                    <div class="selector-header">
+                        <span>Color: <strong>Beige</strong></span>
+                    </div>
+                    <div class="color-options">
+                        <button class="color-btn active" style="background-color: #D2C6B3;" aria-label="Beige"></button>
+                        <button class="color-btn" style="background-color: #1A1A1A;" aria-label="Black"></button>
+                        <button class="color-btn" style="background-color: #4A5344;" aria-label="Olive"></button>
+                    </div>
+                </div>
+
+                <!-- Size Selection -->
+                <div class="pdp-selector">
+                    <div class="selector-header">
+                        <span>Size</span>
+                        <a href="#" class="size-guide">Size Guide</a>
+                    </div>
+                    <div class="size-options">
+                        <button class="size-btn">XS</button>
+                        <button class="size-btn active">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn">L</button>
+                        <button class="size-btn">XL</button>
+                    </div>
+                </div>
+
+                <!-- Add to Cart Actions -->
+                <div class="pdp-actions">
+                    <div class="quantity-selector">
+                        <button class="qty-btn" aria-label="Decrease quantity"><i data-lucide="minus"></i></button>
+                        <input type="number" value="1" min="1" max="10" readonly class="qty-input">
+                        <button class="qty-btn" aria-label="Increase quantity"><i data-lucide="plus"></i></button>
+                    </div>
+                    <button class="btn-luxury-solid add-to-cart-btn pdp-add-btn"
+                        style="flex: 1; text-align: center;">Add to Cart</button>
+                    <button class="btn-luxury-outline wishlist-btn" aria-label="Add to Wishlist"
+                        style="padding: 0 1.5rem; display: flex; align-items: center; justify-content: center;"><i
+                            data-lucide="heart"></i></button>
+                </div>
+
+                <!-- Additional Info Accordions -->
+                <div class="pdp-accordion">
+                    <details class="accordion-item" open>
+                        <summary>Details & Care <i data-lucide="chevron-down" class="accordion-icon"></i></summary>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>100% Cotton Gabardine</li>
+                                <li>Water-resistant finish</li>
+                                <li>Fully lined (100% Cupro)</li>
+                                <li>Dry clean only</li>
+                                <li>Made in Italy</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details class="accordion-item">
+                        <summary>Shipping & Returns <i data-lucide="chevron-down" class="accordion-icon"></i></summary>
+                        <div class="accordion-content">
+                            <p>Free standard shipping on orders over $200. Express shipping available at checkout.</p>
+                            <p>We accept returns within 30 days of the original purchase date for unused items in their
+                                original condition.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Overlay & Drawer -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart (1)</h3>
+            <button class="close-cart" id="close-cart" aria-label="Close cart"><i data-lucide="x"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Sample Item -->
+            <div class="cart-item">
+                <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=1000&auto=format&fit=crop"
+                    alt="Minimalist Trench Coat" class="cart-item-img">
+                <div class="cart-item-info">
+                    <h4 class="cart-item-title">Minimalist Trench Coat</h4>
+                    <p class="cart-item-meta">Color: Beige | Size: S</p>
+                    <p class="cart-item-price">$245.00</p>
+                    <button class="remove-item">Remove</button>
+                </div>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <span>$245.00</span>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--clr-text-light); margin-bottom: 1rem; text-align: center;">
+                Shipping & taxes calculated at checkout.</p>
+            <button class="btn btn-primary btn-full">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">MAHRUKH GUL</a>
+                <p>Elevating everyday fashion with minimalist luxury and timeless designs.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <a href="shop.html">New Arrivals</a>
+                <a href="shop.html">Women</a>
+                <a href="shop.html">Men</a>
+                <a href="shop.html">Sale</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="#">FAQ</a>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">Track Order</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Connected</h4>
+                <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Mahrukh Gul. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // PDP specific scripts
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const mainImage = document.getElementById('main-product-image');
+
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', function () {
+                // Remove active class from all
+                thumbnails.forEach(t => t.classList.remove('active'));
+                // Add active to clicked
+                this.classList.add('active');
+                // Change main image
+                mainImage.src = this.src;
+            });
+        });
+
+        // Size & Color Selectors
+        const sizeBtns = document.querySelectorAll('.size-btn');
+        sizeBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                sizeBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        const colorBtns = document.querySelectorAll('.color-btn');
+        colorBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                colorBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                // Here you would typically update the images based on color
+            });
+        });
+
+        // Quantity Selector
+        const qtyInputs = document.querySelectorAll('.quantity-selector');
+        qtyInputs.forEach(selector => {
+            const minus = selector.querySelector('button:first-child');
+            const plus = selector.querySelector('button:last-child');
+            const input = selector.querySelector('input');
+
+            minus.addEventListener('click', () => {
+                let val = parseInt(input.value);
+                if (val > 1) input.value = val - 1;
+            });
+
+            plus.addEventListener('click', () => {
+                let val = parseInt(input.value);
+                if (val < 10) input.value = val + 1;
+            });
+        });
+    </script>
+</body>
+
+</html>

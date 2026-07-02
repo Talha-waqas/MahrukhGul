@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahrukh Gul | Modern Premium Clothing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- Mobile Sidebar Overlay -->
+    <div class="mobile-overlay"></div>
+    
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button aria-label="Menu" class="icon-btn mobile-menu-toggle"><i data-lucide="menu"></i></button>
+                <div class="nav-links">
+                    <div class="sidebar-header">
+                        <a href="index.html" class="sidebar-brand">MAHRUKH GUL</a>
+                    </div>
+                    <div class="sidebar-divider"></div>
+                    <div class="sidebar-menu">
+                        <a href="shop.html" class="nav-link">Shop</a>
+                        <a href="shop.html" class="nav-link">Collections</a>
+                        <a href="#" class="nav-link">About</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-brand">
+                <a href="index.html">MAHRUKH GUL</a>
+            </div>
+            <div class="nav-right">
+                <button aria-label="Search" class="icon-btn"><i data-lucide="search"></i></button>
+                <a href="login.html" aria-label="Account" class="icon-btn"><i data-lucide="user"></i></a>
+                <button aria-label="Cart" class="icon-btn cart-btn">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cinematic Luxury Hero Slider -->
+    <header class="hero-slider swiper">
+        <div class="swiper-wrapper">
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <div class="slide-bg">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop"
+                        alt="The Art of Modern Elegance">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="slide-content container">
+                    <span class="slide-label" data-swiper-parallax="-200">New Collection</span>
+                    <h1 class="slide-title" data-swiper-parallax="-400">The Art of Modern Elegance</h1>
+                    <p class="slide-desc" data-swiper-parallax="-600">Discover timeless pieces designed for confident
+                        women who appreciate luxury, quality, and effortless style.</p>
+                    <div class="slide-actions" data-swiper-parallax="-800">
+                        <a href="shop.html" class="btn-luxury-solid">Shop Collection</a>
+                        <a href="shop.html" class="btn-luxury-outline">Explore Lookbook</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <div class="slide-bg">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2070&auto=format&fit=crop"
+                        alt="Summer, Reimagined">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="slide-content container">
+                    <span class="slide-label" data-swiper-parallax="-200">Summer Collection</span>
+                    <h1 class="slide-title" data-swiper-parallax="-400">Summer, Reimagined</h1>
+                    <p class="slide-desc" data-swiper-parallax="-600">Light fabrics, graceful silhouettes, and refined
+                        details for every sunny occasion.</p>
+                    <div class="slide-actions" data-swiper-parallax="-800">
+                        <a href="shop.html" class="btn-luxury-solid">Shop Summer</a>
+                        <a href="shop.html" class="btn-luxury-outline">View Collection</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <div class="slide-bg">
+                    <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=2070&auto=format&fit=crop"
+                        alt="Luxury for Every Occasion">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="slide-content container">
+                    <span class="slide-label" data-swiper-parallax="-200">Evening Collection</span>
+                    <h1 class="slide-title" data-swiper-parallax="-400">Luxury for Every Occasion</h1>
+                    <p class="slide-desc" data-swiper-parallax="-600">From intimate dinners to grand celebrations,
+                        discover dresses crafted to make every moment unforgettable.</p>
+                    <div class="slide-actions" data-swiper-parallax="-800">
+                        <a href="shop.html" class="btn-luxury-solid">Explore Dresses</a>
+                        <a href="shop.html" class="btn-luxury-outline">Shop Evening Wear</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+                <div class="slide-bg">
+                    <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=2070&auto=format&fit=crop"
+                        alt="Where Confidence Meets Style">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="slide-content container">
+                    <span class="slide-label" data-swiper-parallax="-200">Signature Collection</span>
+                    <h1 class="slide-title" data-swiper-parallax="-400">Where Confidence Meets Style</h1>
+                    <p class="slide-desc" data-swiper-parallax="-600">Premium craftsmanship and sophisticated fashion
+                        designed to empower modern women.</p>
+                    <div class="slide-actions" data-swiper-parallax="-800">
+                        <a href="shop.html" class="btn-luxury-solid">Shop Signature</a>
+                        <a href="shop.html" class="btn-luxury-outline">Discover More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="swiper-slide">
+                <div class="slide-bg">
+                    <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?q=80&w=2070&auto=format&fit=crop"
+                        alt="Limited Pieces. Lasting Impressions.">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="slide-content container">
+                    <span class="slide-label" data-swiper-parallax="-200">Limited Edition</span>
+                    <h1 class="slide-title" data-swiper-parallax="-400">Limited Pieces.<br>Lasting Impressions.</h1>
+                    <p class="slide-desc" data-swiper-parallax="-600">Exclusive designs created in limited quantities
+                        for women who appreciate timeless luxury.</p>
+                    <div class="slide-actions" data-swiper-parallax="-800">
+                        <a href="shop.html" class="btn-luxury-solid">Shop Limited Edition</a>
+                        <a href="shop.html" class="btn-luxury-outline">View Collection</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Luxury Navigation -->
+        <div class="slider-controls">
+            <div class="swiper-button-prev-custom"><i data-lucide="arrow-left"></i></div>
+            <div class="swiper-pagination-custom"></div>
+            <div class="swiper-button-next-custom"><i data-lucide="arrow-right"></i></div>
+        </div>
+    </header>
+
+    <!-- Premium Trust Elements -->
+    <section class="trust-elements">
+        <div class="trust-container">
+            <div class="trust-item fade-up">
+                <i data-lucide="award"></i>
+                <span>Premium Quality</span>
+            </div>
+            <div class="trust-item fade-up delay-1">
+                <i data-lucide="globe"></i>
+                <span>Worldwide Shipping</span>
+            </div>
+            <div class="trust-item fade-up delay-2">
+                <i data-lucide="lock"></i>
+                <span>Secure Checkout</span>
+            </div>
+            <div class="trust-item fade-up delay-3">
+                <i data-lucide="refresh-cw"></i>
+                <span>Easy Returns</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+                    <!-- New Arrivals Section -->
+                    <section class="featured-collection section-padding">
+                        <div class="container">
+                            <div class="editorial-header fade-up">
+                                <span class="editorial-label">Just Landed</span>
+                                <h2 class="editorial-title">New Arrivals</h2>
+                                <p class="editorial-desc">
+                                    Discover our freshest pieces designed for the modern wardrobe, featuring the latest
+                                    seasonal trends and timeless silhouettes.
+                                </p>
+                                <a href="shop.html" class="editorial-link">Shop New Arrivals <i
+                                        data-lucide="arrow-right"></i></a>
+                            </div>
+
+                            <div class="luxury-grid">
+                                <div class="luxury-card fade-up">
+                                    <div class="luxury-image-wrap">
+                                        <span class="luxury-badge new">New</span>
+                                        <img src="https://images.unsplash.com/photo-1551163943-3f6a855d1153?q=80&w=1000&auto=format&fit=crop"
+                                            alt="Tailored Blazer" class="lux-img-main">
+                                        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1000&auto=format&fit=crop"
+                                            alt="Tailored Blazer Detail" class="lux-img-hover">
+                                        <div class="lux-hover-actions">
+                                            <button class="lux-action-btn" aria-label="Add to Wishlist"><i
+                                                    data-lucide="heart"></i></button>
+                                            <button class="lux-action-btn" aria-label="Quick View"><i
+                                                    data-lucide="eye"></i></button>
+                                        </div>
+                                        <button class="lux-add-cart">Add to Cart</button>
+                                    </div>
+                                    <div class="luxury-info">
+                                        <a href="product.html" class="lux-title">Oversized Linen Blazer</a>
+                                        <div class="lux-price-wrap"><span class="lux-price">Rs. 320.00</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="luxury-card fade-up delay-1">
+                                    <div class="luxury-image-wrap">
+                                        <span class="luxury-badge new">New</span>
+                                        <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=1000&auto=format&fit=crop"
+                                            alt="Silk Dress" class="lux-img-main">
+                                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1000&auto=format&fit=crop"
+                                            alt="Silk Dress Detail" class="lux-img-hover">
+                                        <div class="lux-hover-actions">
+                                            <button class="lux-action-btn" aria-label="Add to Wishlist"><i
+                                                    data-lucide="heart"></i></button>
+                                            <button class="lux-action-btn" aria-label="Quick View"><i
+                                                    data-lucide="eye"></i></button>
+                                        </div>
+                                        <button class="lux-add-cart">Add to Cart</button>
+                                    </div>
+                                    <div class="luxury-info">
+                                        <a href="product.html" class="lux-title">Emerald Silk Midi Dress</a>
+                                        <div class="lux-price-wrap"><span class="lux-price">Rs. 280.00</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="luxury-card fade-up delay-2">
+                                    <div class="luxury-image-wrap">
+                                        <span class="luxury-badge new">New</span>
+                                        <img src="https://images.unsplash.com/photo-1618244972963-dbee1a7edc95?q=80&w=1000&auto=format&fit=crop"
+                                            alt="Leather Bag" class="lux-img-main">
+                                        <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?q=80&w=1000&auto=format&fit=crop"
+                                            alt="Leather Bag Detail" class="lux-img-hover">
+                                        <div class="lux-hover-actions">
+                                            <button class="lux-action-btn" aria-label="Add to Wishlist"><i
+                                                    data-lucide="heart"></i></button>
+                                            <button class="lux-action-btn" aria-label="Quick View"><i
+                                                    data-lucide="eye"></i></button>
+                                        </div>
+                                        <button class="lux-add-cart">Add to Cart</button>
+                                    </div>
+                                    <div class="luxury-info">
+                                        <a href="product.html" class="lux-title">Structured Leather Tote</a>
+                                        <div class="lux-price-wrap"><span class="lux-price">Rs. 410.00</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="luxury-card fade-up delay-3">
+                                    <div class="luxury-image-wrap">
+                                        <span class="luxury-badge new">New</span>
+                                        <img src="https://images.unsplash.com/photo-1596783049187-578d0f1eb728?q=80&w=1000&auto=format&fit=crop"
+                                            alt="Knit Sweater" class="lux-img-main">
+                                        <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?q=80&w=1000&auto=format&fit=crop"
+                                            alt="Knit Sweater Detail" class="lux-img-hover">
+                                        <div class="lux-hover-actions">
+                                            <button class="lux-action-btn" aria-label="Add to Wishlist"><i
+                                                    data-lucide="heart"></i></button>
+                                            <button class="lux-action-btn" aria-label="Quick View"><i
+                                                    data-lucide="eye"></i></button>
+                                        </div>
+                                        <button class="lux-add-cart">Add to Cart</button>
+                                    </div>
+                                    <div class="luxury-info">
+                                        <a href="product.html" class="lux-title">Cashmere Blend Knit</a>
+                                        <div class="lux-price-wrap"><span class="lux-price">Rs. 195.00</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+        <!-- Shop By Category -->
+        <section class="categories section-padding">
+                        <div class="container">
+                            <div class="section-header fade-up" style="text-align: left;">
+                                <h2 style="font-size: 1.5rem; letter-spacing: 0.1em; text-transform: uppercase;">Shop by
+                                    Category</h2>
+                            </div>
+                            <div class="category-grid">
+                                <a href="shop.html?category=new" class="category-card fade-up">
+                                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop"
+                                        alt="New Arrivals">
+                                    <div class="category-content">
+                                        <h3>New Arrivals</h3>
+                                        <span class="link-text">Shop Now</span>
+                                    </div>
+                                </a>
+                                <a href="shop.html?category=dresses" class="category-card fade-up delay-1">
+                                    <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=800&auto=format&fit=crop"
+                                        alt="Dresses">
+                                    <div class="category-content">
+                                        <h3>Dresses</h3>
+                                        <span class="link-text">Shop Now</span>
+                                    </div>
+                                </a>
+                                <a href="shop.html?category=tops" class="category-card fade-up delay-2">
+                                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=800&auto=format&fit=crop"
+                                        alt="Tops & Blouses">
+                                    <div class="category-content">
+                                        <h3>Tops & Blouses</h3>
+                                        <span class="link-text">Shop Now</span>
+                                    </div>
+                                </a>
+                                <a href="shop.html?category=accessories" class="category-card fade-up delay-3">
+                                    <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?q=80&w=800&auto=format&fit=crop"
+                                        alt="Accessories">
+                                    <div class="category-content">
+                                        <h3>Accessories</h3>
+                                        <span class="link-text">Shop Now</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Promotional Banner -->
+                    <section class="promo-banner">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2070&auto=format&fit=crop"
+                            alt="Summer Collection" class="promo-bg">
+                        <div class="promo-overlay"></div>
+                        <div class="promo-content fade-up">
+                            <span class="badge-outline">Limited Time</span>
+                            <h2>Summer Collection</h2>
+                            <p>Elevate your warm-weather wardrobe with up to 40% off selected luxury pieces.</p>
+                            <a href="shop.html" class="btn btn-white">Shop The Sale</a>
+                        </div>
+                    </section>
+
+        <!-- Luxury Featured Collection -->
+        <section class="featured-collection section-padding">
+            <div class="container">
+                <div class="editorial-header fade-up">
+                    <span class="editorial-label">Featured Collection</span>
+                    <h2 class="editorial-title">Designed to Be Admired</h2>
+                    <p class="editorial-desc">Explore our carefully curated collection of timeless fashion, crafted for
+                        women who value elegance, confidence, and premium quality.</p>
+                    <a href="shop.html" class="editorial-link">View All Collection <i data-lucide="arrow-right"></i></a>
+                </div>
+                <div class="luxury-grid">
+                    <!-- Product 1 -->
+                    <div class="luxury-card fade-up">
+                        <div class="luxury-image-wrap">
+                            <span class="luxury-badge">Bestseller</span>
+                            <img src="https://images.unsplash.com/photo-1598554747436-c9293d6a588f?q=80&w=1000&auto=format&fit=crop" alt="Classic Silk Blouse" class="lux-img-main">
+                            <img src="https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?q=80&w=1000&auto=format&fit=crop" alt="Classic Silk Blouse Detail" class="lux-img-hover">
+                            <div class="lux-hover-actions">
+                                <button class="lux-action-btn" aria-label="Add to Wishlist"><i data-lucide="heart"></i></button>
+                                <button class="lux-action-btn" aria-label="Quick View"><i data-lucide="eye"></i></button>
+                            </div>
+                            <button class="lux-add-cart">Add to Cart</button>
+                        </div>
+                        <div class="luxury-info">
+                            <a href="product.html" class="lux-title">Classic Silk Blouse</a>
+                            <div class="lux-price-wrap"><span class="lux-price">Rs. 150.00</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="luxury-card fade-up delay-1">
+                        <div class="luxury-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1583391733958-6c518b5b5257?q=80&w=1000&auto=format&fit=crop" alt="Pleated Midi Skirt" class="lux-img-main">
+                            <img src="https://images.unsplash.com/photo-1583391265696-24e5257cb2ce?q=80&w=1000&auto=format&fit=crop" alt="Pleated Midi Skirt Detail" class="lux-img-hover">
+                            <div class="lux-hover-actions">
+                                <button class="lux-action-btn" aria-label="Add to Wishlist"><i data-lucide="heart"></i></button>
+                                <button class="lux-action-btn" aria-label="Quick View"><i data-lucide="eye"></i></button>
+                            </div>
+                            <button class="lux-add-cart">Add to Cart</button>
+                        </div>
+                        <div class="luxury-info">
+                            <a href="product.html" class="lux-title">Pleated Midi Skirt</a>
+                            <div class="lux-price-wrap"><span class="lux-price">Rs. 180.00</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="luxury-card fade-up delay-2">
+                        <div class="luxury-image-wrap">
+                            <span class="luxury-badge new">New</span>
+                            <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=1000&auto=format&fit=crop" alt="Cashmere Long Coat" class="lux-img-main">
+                            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop" alt="Cashmere Long Coat Detail" class="lux-img-hover">
+                            <div class="lux-hover-actions">
+                                <button class="lux-action-btn" aria-label="Add to Wishlist"><i data-lucide="heart"></i></button>
+                                <button class="lux-action-btn" aria-label="Quick View"><i data-lucide="eye"></i></button>
+                            </div>
+                            <button class="lux-add-cart">Add to Cart</button>
+                        </div>
+                        <div class="luxury-info">
+                            <a href="product.html" class="lux-title">Cashmere Long Coat</a>
+                            <div class="lux-price-wrap"><span class="lux-price">Rs. 450.00</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="luxury-card fade-up delay-3">
+                        <div class="luxury-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1000&auto=format&fit=crop" alt="Leather Ankle Boots" class="lux-img-main">
+                            <img src="https://images.unsplash.com/photo-1551163943-3f6a855d1153?q=80&w=1000&auto=format&fit=crop" alt="Leather Ankle Boots Detail" class="lux-img-hover">
+                            <div class="lux-hover-actions">
+                                <button class="lux-action-btn" aria-label="Add to Wishlist"><i data-lucide="heart"></i></button>
+                                <button class="lux-action-btn" aria-label="Quick View"><i data-lucide="eye"></i></button>
+                            </div>
+                            <button class="lux-add-cart">Add to Cart</button>
+                        </div>
+                        <div class="luxury-info">
+                            <a href="product.html" class="lux-title">Leather Ankle Boots</a>
+                            <div class="lux-price-wrap"><span class="lux-price">Rs. 220.00</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                    <!-- Limited Edition Section -->
+                    <section class="featured-collection section-padding limited-edition-bg">
+                        <div class="container">
+                            <div class="editorial-header fade-up">
+                                <span class="editorial-label">Only a Few Remain</span>
+                                <h2 class="editorial-title">Limited Edition</h2>
+                                <p class="editorial-desc">
+                                    Rare, handcrafted pieces available in extremely limited quantities.
+                                </p>
+                                <a href="shop.html" class="editorial-link">Explore Limited Edition <i
+                                        data-lucide="arrow-right"></i></a>
+                            </div>
+
+                            <div class="luxury-grid">
+                                <div class="luxury-card fade-up">
+                                    <div class="luxury-image-wrap">
+                                        <span class="luxury-badge exclusive">Rare</span>
+                                        <img src="https://images.unsplash.com/photo-1554412933-514a83d2f3c8?q=80&w=1000&auto=format&fit=crop"
+                                            alt="Evening Gown" class="lux-img-main">
+                                        <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?q=80&w=1000&auto=format&fit=crop"
+                                            alt="Evening Gown Detail" class="lux-img-hover">
+                                        <div class="lux-hover-actions">
+                                            <button class="lux-action-btn" aria-label="Add to Wishlist"><i
+                                                    data-lucide="heart"></i></button>
+                                            <button class="lux-action-btn" aria-label="Quick View"><i
+                                                    data-lucide="eye"></i></button>
+                                        </div>
+                                        <button class="lux-add-cart">Add to Cart</button>
+                                    </div>
+                                    <div class="luxury-info">
+                                        <a href="product.html" class="lux-title">Beaded Evening Gown</a>
+                                        <div class="lux-price-wrap"><span class="lux-price">Rs. 890.00</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="luxury-card fade-up delay-1">
+                                    <div class="luxury-image-wrap">
+                                        <span class="luxury-badge exclusive">Rare</span>
+                                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1000&auto=format&fit=crop"
+                                            alt="Sneakers" class="lux-img-main">
+                                        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=1000&auto=format&fit=crop"
+                                            alt="Sneakers Detail" class="lux-img-hover">
+                                        <div class="lux-hover-actions">
+                                            <button class="lux-action-btn" aria-label="Add to Wishlist"><i
+                                                    data-lucide="heart"></i></button>
+                                            <button class="lux-action-btn" aria-label="Quick View"><i
+                                                    data-lucide="eye"></i></button>
+                                        </div>
+                                        <button class="lux-add-cart">Add to Cart</button>
+                                    </div>
+                                    <div class="luxury-info">
+                                        <a href="product.html" class="lux-title">Premium Leather Sneakers</a>
+                                        <div class="lux-price-wrap"><span class="lux-price">Rs. 345.00</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="luxury-card fade-up delay-2">
+                                    <div class="luxury-image-wrap">
+                                        <span class="luxury-badge exclusive">Rare</span>
+                                        <img src="https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?q=80&w=1000&auto=format&fit=crop"
+                                            alt="Gold Jewelry" class="lux-img-main">
+                                        <img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?q=80&w=1000&auto=format&fit=crop"
+                                            alt="Gold Jewelry Detail" class="lux-img-hover">
+                                        <div class="lux-hover-actions">
+                                            <button class="lux-action-btn" aria-label="Add to Wishlist"><i
+                                                    data-lucide="heart"></i></button>
+                                            <button class="lux-action-btn" aria-label="Quick View"><i
+                                                    data-lucide="eye"></i></button>
+                                        </div>
+                                        <button class="lux-add-cart">Add to Cart</button>
+                                    </div>
+                                    <div class="luxury-info">
+                                        <a href="product.html" class="lux-title">18k Gold Layered Necklace</a>
+                                        <div class="lux-price-wrap"><span class="lux-price">Rs. 560.00</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="luxury-card fade-up delay-3">
+                                    <div class="luxury-image-wrap">
+                                        <span class="luxury-badge exclusive">Rare</span>
+                                        <img src="https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1000&auto=format&fit=crop"
+                                            alt="Wool Scarf" class="lux-img-main">
+                                        <img src="https://images.unsplash.com/photo-1520903074092-23214a1fdbff?q=80&w=1000&auto=format&fit=crop"
+                                            alt="Wool Scarf Detail" class="lux-img-hover">
+                                        <div class="lux-hover-actions">
+                                            <button class="lux-action-btn" aria-label="Add to Wishlist"><i
+                                                    data-lucide="heart"></i></button>
+                                            <button class="lux-action-btn" aria-label="Quick View"><i
+                                                    data-lucide="eye"></i></button>
+                                        </div>
+                                        <button class="lux-add-cart">Add to Cart</button>
+                                    </div>
+                                    <div class="luxury-info">
+                                        <a href="product.html" class="lux-title">Handwoven Alpaca Scarf</a>
+                                        <div class="lux-price-wrap"><span class="lux-price">Rs. 180.00</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Features -->
+                    <section class="features section-padding">
+                        <div class="container features-grid">
+                            <div class="feature-card fade-up">
+                                <div class="feature-icon"><i data-lucide="package"></i></div>
+                                <h4>Premium Quality</h4>
+                                <p>Crafted with exceptional materials and attention to detail.</p>
+                            </div>
+                            <div class="feature-card fade-up delay-1">
+                                <div class="feature-icon"><i data-lucide="truck"></i></div>
+                                <h4>Global Shipping</h4>
+                                <p>Complimentary express delivery on orders over $200.</p>
+                            </div>
+                            <div class="feature-card fade-up delay-2">
+                                <div class="feature-icon"><i data-lucide="refresh-cw"></i></div>
+                                <h4>Easy Returns</h4>
+                                <p>Enjoy a hassle-free 30-day return policy.</p>
+                            </div>
+                            <div class="feature-card fade-up delay-3">
+                                <div class="feature-icon"><i data-lucide="shield-check"></i></div>
+                                <h4>Secure Payments</h4>
+                                <p>100% encrypted transactions for your peace of mind.</p>
+                            </div>
+                        </div>
+                    </section>
+
+
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section"
+        style="background-color: var(--clr-background-alt); padding: 5rem 2rem; text-align: center;">
+        <div class="container fade-up" style="max-width: 600px; margin: 0 auto;">
+            <h2
+                style="font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 1rem; color: var(--clr-text); font-weight: 400;">
+                Join The List</h2>
+            <p style="font-size: 1rem; color: var(--clr-text-muted); margin-bottom: 2rem;">Sign up for Exclusive Offers,
+                Early Access, and VIP Collection Launches.</p>
+            <form class="newsletter-form" style="display: flex; gap: 0.5rem; max-width: 450px; margin: 0 auto;">
+                <input type="email" placeholder="Email Address" required
+                    style="flex: 1; padding: 1rem 1.5rem; border: 1px solid rgba(0,0,0,0.1); background: transparent; font-family: var(--font-body); font-size: 0.9rem; outline: none;">
+                <button type="submit" class="btn btn-primary"
+                    style="padding: 0 2rem; white-space: nowrap;">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    </main>
+
+    <!-- Cart Overlay & Drawer -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart (1)</h3>
+            <button class="close-cart" id="close-cart" aria-label="Close cart"><i data-lucide="x"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Sample Item -->
+            <div class="cart-item">
+                <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=1000&auto=format&fit=crop"
+                    alt="Minimalist Trench Coat" class="cart-item-img">
+                <div class="cart-item-info">
+                    <h4 class="cart-item-title">Minimalist Trench Coat</h4>
+                    <p class="cart-item-meta">Color: Beige | Size: S</p>
+                    <p class="cart-item-price">$245.00</p>
+                    <button class="remove-item">Remove</button>
+                </div>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <span>$245.00</span>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--clr-text-light); margin-bottom: 1rem; text-align: center;">
+                Shipping & taxes calculated at checkout.</p>
+            <button class="btn btn-primary btn-full">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">MAHRUKH GUL</a>
+                <p>Elevating everyday fashion with minimalist luxury and timeless designs.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <a href="shop.html">New Arrivals</a>
+                <a href="shop.html">Women</a>
+                <a href="shop.html">Men</a>
+                <a href="shop.html">Sale</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="#">FAQ</a>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">Track Order</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Connected</h4>
+                <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Mahrukh Gul. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
