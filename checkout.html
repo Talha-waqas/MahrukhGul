@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,19 +15,30 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar scrolled" id="navbar" style="position: relative; background: var(--clr-background);">
+        <!-- Navbar -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-left">
+                <button aria-label="Menu" class="icon-btn mobile-menu-toggle"><i data-lucide="menu"></i></button>
                 <div class="nav-links">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="shop.html" class="nav-link">Shop</a>
+                    <div class="sidebar-header">
+                        <a href="index.html" class="sidebar-brand">MAHRUKH GUL</a>
+                    </div>
+                    <div class="sidebar-divider"></div>
+                    <div class="sidebar-menu">
+                        <a href="shop.html" class="nav-link">Shop</a>
+                        <a href="shop.html" class="nav-link">Collections</a>
+                        <a href="page.html" class="nav-link">About</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </div>
                 </div>
             </div>
             <div class="nav-brand">
                 <a href="index.html">MAHRUKH GUL</a>
             </div>
             <div class="nav-right">
+                <button aria-label="Search" class="icon-btn"><i data-lucide="search"></i></button>
+                <a href="login.html" aria-label="Account" class="icon-btn"><i data-lucide="user"></i></a>
                 <button aria-label="Cart" class="icon-btn cart-btn">
                     <i data-lucide="shopping-bag"></i>
                     <span class="cart-count">0</span>
@@ -78,7 +89,7 @@
 
                 <section class="checkout-section">
                     <h3>Payment</h3>
-                    <p style="color: var(--clr-text-muted); font-size: 0.9rem; margin-bottom: 1rem;">All transactions are secure and encrypted.</p>
+                    <p>All transactions are secure and encrypted.</p>
                     <div class="payment-box">
                         <div class="form-group">
                             <input type="text" placeholder="Card number" class="form-input" required>
@@ -97,7 +108,7 @@
                     </div>
                 </section>
 
-                <button class="btn btn-primary btn-full checkout-submit-btn" style="margin-top: 2rem;">Pay Now</button>
+                <button class="btn btn-primary btn-full checkout-submit-btn">Pay Now</button>
             </div>
 
             <!-- Right Column: Order Summary -->
@@ -125,16 +136,43 @@
         </div>
     </main>
 
-    <!-- Footer -->
+        <!-- Footer -->
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-brand">
                 <a href="index.html" class="footer-logo">MAHRUKH GUL</a>
                 <p>Elevating everyday fashion with minimalist luxury and timeless designs.</p>
             </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <a href="shop.html">New Arrivals</a>
+                <a href="shop.html">Women</a>
+                <a href="shop.html">Men</a>
+                <a href="shop.html">Sale</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="#">FAQ</a>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">Track Order</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Connected</h4>
+                <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
         </div>
         <div class="footer-bottom container">
             <p>&copy; 2026 Mahrukh Gul. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            </div>
         </div>
     </footer>
 
@@ -153,9 +191,9 @@
                 <span>Subtotal</span>
                 <span>Rs. 0.00</span>
             </div>
-            <p style="font-size: 0.8rem; color: var(--clr-text-light); margin-bottom: 1rem; text-align: center;">
+            <p>
                 Shipping & taxes calculated at checkout.</p>
-            <a href="checkout.html" class="btn btn-primary btn-full" style="text-align: center; text-decoration: none; display: block;">Checkout</a>
+            <a href="checkout.html" class="btn btn-primary btn-full">Checkout</a>
         </div>
     </div>
 
@@ -219,3 +257,5 @@
 </body>
 
 </html>
+
+

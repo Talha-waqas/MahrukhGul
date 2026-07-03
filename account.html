@@ -1,19 +1,24 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Mahrukh Gul</title>
+    <title>My Account | Mahrukh Gul</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    
 </head>
+
 <body>
     <!-- Mobile Sidebar Overlay -->
     <div class="mobile-overlay"></div>
-
+    
         <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -46,50 +51,7 @@
         </div>
     </nav>
 
-    <!-- Login Section -->
-    <main class="auth-layout fade-up">
-        <div class="auth-container">
-            <div class="auth-header">
-                <h1>Welcome Back</h1>
-                <p>Sign in to access your wishlist and exclusive offers.</p>
-            </div>
-            
-            <form class="auth-form">
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" required placeholder="name@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" required placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢">
-                </div>
-                
-                <div class="auth-actions">
-                    <label>
-                        <input type="checkbox"> Remember me
-                    </label>
-                    <a href="#">Forgot password?</a>
-                </div>
-                
-                <button type="submit" class="btn btn-primary btn-full">Sign In</button>
-            </form>
-            
-            <div class="auth-divider">
-                <span>OR</span>
-            </div>
-            
-            <button class="btn btn-secondary btn-full">
-                <i data-lucide="mail"></i> Continue with Google
-            </button>
-            
-            <p>
-                Don't have an account? <a href="register.html" class="link-underline">Register</a>
-            </p>
-        </div>
-    </main>
-
-    <!-- Cart Overlay & Drawer Placeholder -->
-    <!-- (Normally included via partials, but placed here for static demo) -->
+    <!-- Cart Drawer -->
     <div class="cart-overlay" id="cart-overlay"></div>
     <div class="cart-drawer" id="cart-drawer">
         <div class="cart-header">
@@ -97,18 +59,69 @@
             <button class="close-cart" id="close-cart" aria-label="Close cart"><i data-lucide="x"></i></button>
         </div>
         <div class="cart-items">
-            <!-- Items rendered by script.js -->
-        </div>
-        <div class="cart-footer">
-            <div class="cart-subtotal">
-                <span>Subtotal</span>
-                <span>Rs. 0.00</span>
+            <div class="empty-state">
+                <i data-lucide="shopping-bag" class="empty-state-icon"></i>
+                <h3>Your cart is empty</h3>
+                <a href="shop.html" class="btn btn-primary">Return to Shop</a>
             </div>
-            <p>
-                Shipping & taxes calculated at checkout.</p>
-            <a href="checkout.html" class="btn btn-primary btn-full">Checkout</a>
         </div>
     </div>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a>
+                <span class="separator">/</span>
+                <span>My Account</span>
+            </div>
+            <h1>My Account</h1>
+        </div>
+    </header>
+
+    <main class="account-section">
+        <div class="container account-container">
+            
+            <aside>
+                <ul class="account-nav">
+                    <li><a href="#" class="active"><i data-lucide="layout-dashboard"></i> Dashboard</a></li>
+                    <li><a href="#"><i data-lucide="package"></i> Orders</a></li>
+                    <li><a href="#"><i data-lucide="map-pin"></i> Addresses</a></li>
+                    <li><a href="#"><i data-lucide="user"></i> Account Details</a></li>
+                    <li><a href="#"><i data-lucide="heart"></i> Wishlist</a></li>
+                    <li><a href="login.html"><i data-lucide="log-out"></i> Logout</a></li>
+                </ul>
+            </aside>
+
+            <div class="account-content">
+                <div class="woocommerce-message">
+                    Hello <strong>Jane Doe</strong> (not <strong>Jane Doe</strong>? <a href="#">Log out</a>)
+                </div>
+
+                <h2>Dashboard</h2>
+                <p>From your account dashboard you can view your recent orders, manage your shipping and billing addresses, and edit your password and account details.</p>
+
+                <div class="dashboard-cards">
+                    <div class="dashboard-card">
+                        <i data-lucide="package"></i>
+                        <h4>Orders</h4>
+                        <p>View past orders and tracking.</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <i data-lucide="map-pin"></i>
+                        <h4>Addresses</h4>
+                        <p>Manage shipping addresses.</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <i data-lucide="user"></i>
+                        <h4>Details</h4>
+                        <p>Update personal information.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
 
         <!-- Footer -->
     <footer class="footer">

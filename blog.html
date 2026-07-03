@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal | Mahrukh Gul</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+</head>
+
+<body>
+    <!-- Mobile Sidebar Overlay -->
+    <div class="mobile-overlay"></div>
+    
+        <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button aria-label="Menu" class="icon-btn mobile-menu-toggle"><i data-lucide="menu"></i></button>
+                <div class="nav-links">
+                    <div class="sidebar-header">
+                        <a href="index.html" class="sidebar-brand">MAHRUKH GUL</a>
+                    </div>
+                    <div class="sidebar-divider"></div>
+                    <div class="sidebar-menu">
+                        <a href="shop.html" class="nav-link">Shop</a>
+                        <a href="shop.html" class="nav-link">Collections</a>
+                        <a href="page.html" class="nav-link">About</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-brand">
+                <a href="index.html">MAHRUKH GUL</a>
+            </div>
+            <div class="nav-right">
+                <button aria-label="Search" class="icon-btn"><i data-lucide="search"></i></button>
+                <a href="login.html" aria-label="Account" class="icon-btn"><i data-lucide="user"></i></a>
+                <button aria-label="Cart" class="icon-btn cart-btn">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart (0)</h3>
+            <button class="close-cart" id="close-cart" aria-label="Close cart"><i data-lucide="x"></i></button>
+        </div>
+        <div class="cart-items">
+            <div class="empty-state">
+                <i data-lucide="shopping-bag" class="empty-state-icon"></i>
+                <h3>Your cart is empty</h3>
+                <a href="shop.html" class="btn btn-primary">Return to Shop</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a>
+                <span class="separator">/</span>
+                <span>Journal</span>
+            </div>
+            <h1>The Journal</h1>
+            <p>Stories on fashion, lifestyle, and elegance.</p>
+        </div>
+    </header>
+
+    <main class="blog-section">
+        <div class="container">
+            <div class="blog-grid">
+                
+                <!-- Blog Post 1 -->
+                <article class="blog-card fade-up">
+                    <a href="single.html"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop" alt="The Art of Modern Elegance" class="blog-image"></a>
+                    <div class="blog-meta">
+                        <span>July 1, 2026</span>
+                        <span>&bull;</span>
+                        <a href="#">Fashion</a>
+                    </div>
+                    <a href="single.html"><h2 class="blog-title">The Art of Modern Elegance in 2026</h2></a>
+                    <p class="blog-excerpt">Discover how minimalist luxury is reshaping the way we think about everyday wear and statement pieces...</p>
+                    <a href="single.html" class="read-more">Read Article <i data-lucide="arrow-right"></i></a>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card fade-up delay-1">
+                    <a href="single.html"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2070&auto=format&fit=crop" alt="Summer Wardrobe Essentials" class="blog-image"></a>
+                    <div class="blog-meta">
+                        <span>June 15, 2026</span>
+                        <span>&bull;</span>
+                        <a href="#">Style Guides</a>
+                    </div>
+                    <a href="single.html"><h2 class="blog-title">5 Essential Pieces for Your Summer Wardrobe</h2></a>
+                    <p class="blog-excerpt">From linen blazers to silk dresses, here are the must-have items to elevate your warm-weather style...</p>
+                    <a href="single.html" class="read-more">Read Article <i data-lucide="arrow-right"></i></a>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card fade-up delay-2">
+                    <a href="single.html"><img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=2070&auto=format&fit=crop" alt="Behind the Collection" class="blog-image"></a>
+                    <div class="blog-meta">
+                        <span>May 28, 2026</span>
+                        <span>&bull;</span>
+                        <a href="#">Behind the Scenes</a>
+                    </div>
+                    <a href="single.html"><h2 class="blog-title">Behind the Design: The Signature Collection</h2></a>
+                    <p class="blog-excerpt">An exclusive look into the creative process and craftsmanship behind our most requested collection to date...</p>
+                    <a href="single.html" class="read-more">Read Article <i data-lucide="arrow-right"></i></a>
+                </article>
+
+            </div>
+
+            <!-- Pagination -->
+            <nav class="pagination" aria-label="Pagination">
+                <span class="page-numbers current">1</span>
+                <a class="page-numbers" href="#">2</a>
+                <a class="page-numbers" href="#">3</a>
+                <a class="page-numbers next" href="#"><i data-lucide="chevron-right"></i></a>
+            </nav>
+
+        </div>
+    </main>
+
+        <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">MAHRUKH GUL</a>
+                <p>Elevating everyday fashion with minimalist luxury and timeless designs.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <a href="shop.html">New Arrivals</a>
+                <a href="shop.html">Women</a>
+                <a href="shop.html">Men</a>
+                <a href="shop.html">Sale</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="#">FAQ</a>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">Track Order</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Connected</h4>
+                <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Mahrukh Gul. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
