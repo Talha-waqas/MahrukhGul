@@ -510,7 +510,7 @@ a {
 }
 
 .product-card {
-    group: relative;
+    position: relative;
 }
 
 .product-image-wrap {
